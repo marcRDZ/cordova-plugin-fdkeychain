@@ -24,7 +24,7 @@
                                inAccessGroup: accessGroup
                                        error: &error];
     if (error != nil) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: error.localizedDescription];
     }else{
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:value];
     }
@@ -54,7 +54,7 @@
                                    inAccessGroup: accessGroup
                                            error: &error];
         if (error != nil) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: error.localizedDescription];
         }else{
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArrayBuffer:value];
         }
@@ -90,9 +90,9 @@
                                   error: &error];
 
     if (success) {
-      pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+      pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[NSString stringWithFormat:@" %@ successfully saved", key]];
     }else{
-      pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+      pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: error.localizedDescription];
     }
       
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -122,9 +122,9 @@
                                           error: &error];
       
     if (success) {
-       pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+       pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[NSString stringWithFormat:@" %@ successfully removed", key]];
     }else{
-       pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+       pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: error.localizedDescription];
     }
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
