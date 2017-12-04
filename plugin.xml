@@ -2,7 +2,7 @@
 <plugin id="cordova-plugin-fdkeychain" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <name>FDKeychain</name>
+    <name>FDKeychain Cordova Plugin</name>
     <description>Plugin to provide FDKeychain iOS/OSX Project features to Cordova Framework. For more info visit: https://github.com/reidmain/FDKeychain.git</description>
     <license>MIT</license>
     <keywords>keychain</keywords>
@@ -14,8 +14,8 @@
     <platform name="ios">
 
         <config-file parent="/*" target="config.xml">
-            <feature name="FDKeychain">
-                <param name="ios-package" value="FDKeychain" />
+            <feature name="FDKeychainPlugin">
+                <param name="ios-package" value="FDKeychainPlugin" />
             </feature>
         </config-file>
 
