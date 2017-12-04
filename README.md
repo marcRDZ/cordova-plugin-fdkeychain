@@ -3,7 +3,7 @@
 
 Plugin to provide FDKeychain iOS/OSX Project features to Cordova Framework, mainly access to keychain sharing between apps. For more info visit:  https://github.com/reidmain/FDKeychain.git
 
-##<a name="installation"></a>Installation
+##  Installation
 The plugin can be installed via the Cordova command line interface:
 * Navigate to the root folder for your Cordova/Phonegap/Ionic project.
 * Run the command:
@@ -15,21 +15,11 @@ or through this git repo if you want to be running the development version:
 cordova plugin add https://github.com/marcRDZ/cordova-plugin-fdkeychain.git
 ```
 
-###<a name="reinstalling_dev"></a>Reinstalling/installing developer version
-Remove the plugin from the current project:
-```sh
-cordova plugin remove cordova-plugin-nativestorage
-```
-Install the developer version from Github:
-```sh
-cordova plugin add https://github.com/marcRDZ/cordova-plugin-fdkeychain.git
-```
-
-##<a name="supported_platforms"></a>Supported platforms
+## Supported platforms
 
 - iOS
 
-##<a name="usage"></a>Usage
+## Usage
 
 At this moment the only way to import and use is as follows:
 
@@ -37,7 +27,8 @@ At this moment the only way to import and use is as follows:
 declare var cordova: any;
 ```
 
-###<a name="storing_values"></a>Storing values
+### Storing values
+
 ```javascript
 
     cordova.plugins.FDKeychainPlugin.setItemForService((data)=>{
@@ -53,7 +44,8 @@ declare var cordova: any;
     }, 'my_key', 'myValue', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
 ```
 
-###<a name="retrieving_values"></a>Retrieving values
+### Retrieving values
+
 ```javascript
 
     cordova.plugins.FDKeychainPlugin.getItemForService((data)=>{
@@ -70,7 +62,8 @@ declare var cordova: any;
 
 ```
 
-###<a name="retrieving_values"></a>Retrieving raw data
+### Retrieving raw data
+
 ```javascript
 
     cordova.plugins.FDKeychainPlugin.getRawDataForService((data)=>{
@@ -87,9 +80,8 @@ declare var cordova: any;
 
 ```
 
-###<a name="removing_values"></a>Removing values
+### Removing values
 
-Removing a single variable:
 ```javascript
 
     cordova.plugins.FDKeychainPlugin.removeItemForService((data)=>{
