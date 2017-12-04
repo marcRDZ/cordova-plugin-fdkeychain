@@ -31,13 +31,13 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychainPlugin.setItemForService((data)=>{
+    cordova.plugins.FDKeychain.setItemForService((data)=>{
       console.log('FDKeychain success', data);
     }, (error)=>{
       console.log('FDKeychain error', error);
     }, 'my_key', 'myValue', 'myApplication');
     
-    cordova.plugins.FDKeychainPlugin.setItemForServiceInAccessGroup((data)=>{
+    cordova.plugins.FDKeychain.setItemForServiceInAccessGroup((data)=>{
       console.log('FDKeychain success', data);
     }, (error)=>{
       console.log('FDKeychain error', error);
@@ -48,13 +48,13 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychainPlugin.getItemForService((data)=>{
+    cordova.plugins.FDKeychain.getItemForService((data)=>{
       console.log('FDKeychain get success', data);
     }, (error)=>{
       console.log('FDKeychain get error', error);
     }, 'my_key', 'myApplication');
     
-    cordova.plugins.FDKeychainPlugin.getItemForServiceInAccessGroup((data)=>{
+    cordova.plugins.FDKeychain.getItemForServiceInAccessGroup((data)=>{
       console.log('FDKeychain', data);
     }, (error)=>{
       console.log('FDKeychain', error);
@@ -66,13 +66,13 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychainPlugin.getRawDataForService((data)=>{
+    cordova.plugins.FDKeychain.getRawDataForService((data)=>{
       console.log('FDKeychain get success', data);
     }, (error)=>{
       console.log('FDKeychain get error', error);
     }, 'my_key', 'myApplication');
     
-    cordova.plugins.FDKeychainPlugin.getRawDataForServiceInAccessGroup((data)=>{
+    cordova.plugins.FDKeychain.getRawDataForServiceInAccessGroup((data)=>{
       console.log('FDKeychain', data);
     }, (error)=>{
       console.log('FDKeychain', error);
@@ -84,13 +84,13 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychainPlugin.removeItemForService((data)=>{
+    cordova.plugins.FDKeychain.removeItemForService((data)=>{
       console.log('FDKeychain success', data);
     }, (error)=>{
       console.log('FDKeychain error', error);
     }, 'my_key', 'myApplication');
     
-    cordova.plugins.FDKeychainPlugin.removeItemForServiceInAccessGroup((data)=>{
+    cordova.plugins.FDKeychain.removeItemForServiceInAccessGroup((data)=>{
       console.log('FDKeychain success', data);
     }, (error)=>{
       console.log('FDKeychain error', error);
