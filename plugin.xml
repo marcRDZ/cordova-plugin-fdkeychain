@@ -6,12 +6,12 @@
     <description>Plugin to provide FDKeychain iOS/OSX Project features to Cordova Framework. For more info visit: https://github.com/reidmain/FDKeychain.git</description>
     <license>MIT</license>
     <keywords>keychain</keywords>
-
-    <js-module name="FDKeychain" src="www/FDKeychain.js">
-        <clobbers target="cordova.plugins.FDKeychain" />
-    </js-module>
     
     <platform name="ios">
+
+    	<js-module name="FDKeychain" src="www/FDKeychain.js">
+        	<clobbers target="cordova.plugins.FDKeychain" />
+    	</js-module>
 
         <config-file parent="/*" target="config.xml">
             <feature name="FDKeychainPlugin">
