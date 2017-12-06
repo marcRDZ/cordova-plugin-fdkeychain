@@ -31,34 +31,37 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychain.setItemForService((data)=>{
-      console.log('FDKeychain success', data);
-    }, (error)=>{
-      console.log('FDKeychain error', error);
-    }, 'my_key', 'myValue', 'myApplication');
+    cordova.plugins.FDKeychain.setItemForService(
+      (data)=>{
+        console.log('FDKeychain success', data);
+      }, (error)=>{
+        console.log('FDKeychain error', error);
+      }, 'my_key', 'myValue', 'myApplication', <onlyAccessibleWhenUnlocked: boolean>);
     
-    cordova.plugins.FDKeychain.setItemForServiceInAccessGroup((data)=>{
-      console.log('FDKeychain success', data);
-    }, (error)=>{
-      console.log('FDKeychain error', error);
-    }, 'my_key', 'myValue', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
+    cordova.plugins.FDKeychain.setItemForServiceInAccessGroup(
+      (data)=>{
+        console.log('FDKeychain success', data);
+      }, (error)=>{
+        console.log('FDKeychain error', error);
+      }, 'my_key', 'myValue', 'myApplication', 'XXXXXXXXXXX.myAccessGroup', <onlyAccessibleWhenUnlocked: boolean>);
 ```
 
 ### Retrieving values
 
 ```javascript
 
-    cordova.plugins.FDKeychain.getItemForService((data)=>{
-      console.log('FDKeychain get success', data);
-    }, (error)=>{
-      console.log('FDKeychain get error', error);
-    }, 'my_key', 'myApplication');
-    
-    cordova.plugins.FDKeychain.getItemForServiceInAccessGroup((data)=>{
-      console.log('FDKeychain', data);
-    }, (error)=>{
-      console.log('FDKeychain', error);
-    }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
+    cordova.plugins.FDKeychain.getItemForService(
+      (data)=>{
+        console.log('FDKeychain get success', data);
+      }, (error)=>{
+        console.log('FDKeychain get error', error);
+      }, 'my_key', 'myApplication');
+      
+      cordova.plugins.FDKeychain.getItemForServiceInAccessGroup((data)=>{
+        console.log('FDKeychain', data);
+      }, (error)=>{
+        console.log('FDKeychain', error);
+      }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
 
 ```
 
@@ -66,17 +69,19 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychain.getRawDataForService((data)=>{
-      console.log('FDKeychain get success', data);
-    }, (error)=>{
-      console.log('FDKeychain get error', error);
-    }, 'my_key', 'myApplication');
+    cordova.plugins.FDKeychain.getRawDataForService(
+      (data)=>{
+        console.log('FDKeychain get success', data);
+      }, (error)=>{
+        console.log('FDKeychain get error', error);
+      }, 'my_key', 'myApplication');
     
-    cordova.plugins.FDKeychain.getRawDataForServiceInAccessGroup((data)=>{
-      console.log('FDKeychain', data);
-    }, (error)=>{
-      console.log('FDKeychain', error);
-    }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
+    cordova.plugins.FDKeychain.getRawDataForServiceInAccessGroup(
+      (data)=>{
+        console.log('FDKeychain', data);
+      }, (error)=>{
+        console.log('FDKeychain', error);
+      }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
 
 ```
 
@@ -84,15 +89,18 @@ declare var cordova: any;
 
 ```javascript
 
-    cordova.plugins.FDKeychain.removeItemForService((data)=>{
-      console.log('FDKeychain success', data);
-    }, (error)=>{
-      console.log('FDKeychain error', error);
-    }, 'my_key', 'myApplication');
+    cordova.plugins.FDKeychain.removeItemForService(
+      (data)=>{
+        console.log('FDKeychain success', data);
+      }, (error)=>{
+        console.log('FDKeychain error', error);
+      }, 'my_key', 'myApplication');
     
-    cordova.plugins.FDKeychain.removeItemForServiceInAccessGroup((data)=>{
-      console.log('FDKeychain success', data);
-    }, (error)=>{
-      console.log('FDKeychain error', error);
-    }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
+    cordova.plugins.FDKeychain.removeItemForServiceInAccessGroup(
+      (data)=>{
+        console.log('FDKeychain success', data);
+      }, (error)=>{
+        console.log('FDKeychain error', error);
+      }, 'my_key', 'myApplication', 'XXXXXXXXXXX.myAccessGroup');
+
 ```
