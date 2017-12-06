@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-fdkeychain",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Plugin to provide FDKeychain iOS Project features to Cordova Framework. For more info visit: https://github.com/reidmain/FDKeychain.git",
   "cordova": {
     "id": "cordova-plugin-fdkeychain",
